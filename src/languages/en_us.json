@@ -1,6 +1,6 @@
 {
     "command.autorole.name": "autorole",
-    "command.autorole.description": "Set an autorole for new users\nIf you want to disable the event, just use ``h+autorole delete``",
+    "command.autorole.description": "Set an autorole for new users\nIf you want to disable the event, just use ``s+autorole delete``",
     "command.autorole.usage": "autorole <Role>",
     "command.autorole.roleRequired": "Please specify a role",
     "command.autorole.currentRole": "Currently, $autorole is set as autorole",
@@ -20,7 +20,7 @@
 
 
     "command.joinmsg.name": "joinmsg",
-    "command.joinmsg.description": "Set a join message for new joined users\nIf you want to reset your message to default, just type ``h+joinmsg <Channel>``\nIf you want to disable your event, use ``h+joinmsg delete``\nUser Mention: {user}\nGuild Name: {guild}",
+    "command.joinmsg.description": "Set a join message for new joined users\nIf you want to reset your message to default, just type ``s+joinmsg <Channel>``\nIf you want to disable your event, use ``s+joinmsg delete``\nUser Mention: {user}\nGuild Name: {guild}",
     "command.joinmsg.usage": "joinmsg <Channel> [Message]",
     "command.joinmsg.currentChannel": "Current Channel",
     "command.joinmsg.currentMessage": "Current Message",
@@ -33,7 +33,7 @@
 
 
     "command.leavemsg.name": "leavemsg",
-    "command.leavemsg.description": "Set a leave message for users who left the servers\nIf you want to reset your message to default, just type ``h+leavemsg <Channel>``\nIf you want to disable your event, use ``h+leavemsg delete``\nUser Mention: {user}\nGuild Name: {guild}",
+    "command.leavemsg.description": "Set a leave message for users who left the servers\nIf you want to reset your message to default, just type ``s+leavemsg <Channel>``\nIf you want to disable your event, use ``s+leavemsg delete``\nUser Mention: {user}\nGuild Name: {guild}",
     "command.leavemsg.usage": "leavemsg <Channel> [Message]",
     "command.leavemsg.currentChannel": "Current Channel",
     "command.leavemsg.currentMessage": "Current Message",

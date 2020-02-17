@@ -1,6 +1,6 @@
 {
     "command.autorole.name": "autorole",
-    "command.autorole.description": "Lege eine autorolle für neue Mitglieder fest\nWenn das Event deaktiviert werden soll, verwende einfach ``h+autorole delete``",
+    "command.autorole.description": "Lege eine autorolle für neue Mitglieder fest\nWenn das Event deaktiviert werden soll, verwende einfach ``s+autorole delete``",
     "command.autorole.usage": "autorole <Rolle>",
     "command.autorole.roleRequired": "Bitte gib eine Rolle an",
     "command.autorole.currentRole": "Aktuell ist $autorole als Autorolle festgelegt",
@@ -20,7 +20,7 @@
 
 
     "command.joinmsg.name": "joinmsg",
-    "command.joinmsg.description": "Lege eine Nachricht fest, wenn jemand dem Server beitritt\nWenn die Nachricht auf ihr Standard zurückgesetzt werden soll, verwende einfach ``h+joinmmsg <Kanal>``\nWenn das Event deaktiviert werden soll, verwende einfach ``h+joinmsg delete``\nBenutzer Erwähnung: {user}\nServer Name: {guild}",
+    "command.joinmsg.description": "Lege eine Nachricht fest, wenn jemand dem Server beitritt\nWenn die Nachricht auf ihr Standard zurückgesetzt werden soll, verwende einfach ``s+joinmmsg <Kanal>``\nWenn das Event deaktiviert werden soll, verwende einfach ``s+joinmsg delete``\nBenutzer Erwähnung: {user}\nServer Name: {guild}",
     "command.joinmsg.usage": "joinmsg <Kanal> [Nachricht]",
     "command.joinmsg.currentChannel": "Aktueller Kanal",
     "command.joinmsg.currentMessage": "Aktuelle Nachricht",
@@ -33,7 +33,7 @@
 
 
     "command.leavemsg.name": "leavemsg",
-    "command.leavemsg.description": "Lege eine Nachricht fest, wenn jemand den Server verlässt\nWenn die Nachricht auf ihr Standard zurückgesetzt werden soll, verwende einfach ``h+leavemsg <Kanal>``\nWenn das Event deaktiviert werden soll, verwende einfach ``h+leavemsg delete``\nBenutzer Erwähnung: {user}\nServer Name: {guild}",
+    "command.leavemsg.description": "Lege eine Nachricht fest, wenn jemand den Server verlässt\nWenn die Nachricht auf ihr Standard zurückgesetzt werden soll, verwende einfach ``s+leavemsg <Kanal>``\nWenn das Event deaktiviert werden soll, verwende einfach ``s+leavemsg delete``\nBenutzer Erwähnung: {user}\nServer Name: {guild}",
     "command.leavemsg.usage": "leavemsg <Kanal> [Nachricht]",
     "command.leavemsg.currentChannel": "Aktueller Kanal",
     "command.leavemsg.currentMessage": "Aktuelle Nachricht",
