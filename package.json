@@ -1,0 +1,37 @@
+{
+	"name": "silicia",
+	"version": "2.1",
+	"description": "A cool little bot with commands for gamers, server owners and developers.",
+	"main": "src/main.js",
+	"author": "Newtox",
+	"license": "MIT",
+	"scripts": {},
+	"dependencies": {
+		"discord.js": "^11.5.1",
+		"dotenv": "^6.2.0",
+		"ffmpeg": "0.0.4",
+		"ffmpeg-binaries": "^4.0.0",
+		"moment": "^2.24.0",
+		"mysql2": "^2.1.0",
+		"nekos.life": "^2.0.4",
+		"opusscript": "^0.0.6",
+		"simple-youtube-api": "^5.2.1",
+		"urban": "^0.3.2",
+		"yt-search": "^1.1.2",
+		"ytdl-core": "^1.0.7",
+		"ytdl-core-discord": "amishshah/ytdl-core-discord"
+	},
+	"devDependencies": {
+		"eslint": "^5.14.0",
+		"eslint-config-aqua": "^4.4.1"
+	},
+	"optionalDependencies": {
+		"@discordjs/uws": "^11.149.1",
+		"erlpack": "discordapp/erlpack",
+		"node-opus": "^0.3.1",
+		"zlib-sync": "^0.1.4"
+	},
+	"eslintConfig": {
+		"extends": "aqua/node"
+	}
+}

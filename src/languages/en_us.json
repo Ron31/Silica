@@ -1,0 +1,553 @@
+{
+    "command.autorole.name": "autorole",
+    "command.autorole.description": "Set an autorole for new users\nIf you want to disable the event, just use ``h+autorole delete``",
+    "command.autorole.usage": "autorole <Role>",
+    "command.autorole.roleRequired": "Please specify a role",
+    "command.autorole.currentRole": "Currently, $autorole is set as autorole",
+    "command.autorole.roleNotExist": "This role does not exist on the server",
+    "command.autorole.roleSet": "$autorole has been set as autorole",
+    "command.autorole.roleDeleted": "Autorole has been deleted",
+    "command.autorole.permsErrorUser": "Sorry, you need the ``Manage Guild`` permission to use this command",
+    "command.autorole.permsErrorBot": "Sorry, but I got Missing Permissions\nGive me the `Manage Roles`` permission, so I can add roles to new users",
+
+
+    "command.language.name": "language",
+    "command.language.description": "Set the language for the bot",
+    "command.language.usage": "language <Language>",
+    "command.language.validLang": "Please enter a valid language",
+    "command.language.set": "Language has been changed to $lang",
+    "command.language.permsErrorUser": "Sorry, you need the ``Manage Guild`` permission to use this command",
+
+
+    "command.joinmsg.name": "joinmsg",
+    "command.joinmsg.description": "Set a join message for new joined users\nIf you want to reset your message to default, just type ``h+joinmsg <Channel>``\nIf you want to disable your event, use ``h+joinmsg delete``\nUser Mention: {user}\nGuild Name: {guild}",
+    "command.joinmsg.usage": "joinmsg <Channel> [Message]",
+    "command.joinmsg.currentChannel": "Current Channel",
+    "command.joinmsg.currentMessage": "Current Message",
+    "command.joinmsg.channelRequired": "Please specify a channel",
+    "command.joinmsg.Deleted": "Joinmsg has been deleted",
+    "command.joinmsg.channelNotExist": "This channel does not exist on the server",
+    "command.joinmsg.message.default": "Welcome {user} to {guild}",
+    "command.joinmsg.messageSet": "Joinmsg has been set in $channel",
+    "command.joinmsg.permsErrorUser": "Sorry, you need the ``Manage Guild`` permission to use this command",
+
+
+    "command.leavemsg.name": "leavemsg",
+    "command.leavemsg.description": "Set a leave message for users who left the servers\nIf you want to reset your message to default, just type ``h+leavemsg <Channel>``\nIf you want to disable your event, use ``h+leavemsg delete``\nUser Mention: {user}\nGuild Name: {guild}",
+    "command.leavemsg.usage": "leavemsg <Channel> [Message]",
+    "command.leavemsg.currentChannel": "Current Channel",
+    "command.leavemsg.currentMessage": "Current Message",
+    "command.leavemsg.channelRequired": "Please specify a channel",
+    "command.leavemsg.Deleted": "Leavemsg has been deleted",
+    "command.leavemsg.channelNotExist": "This channel does not exist on the server",
+    "command.leavemsg.message.default": "{user} left {guild}",
+    "command.leavemsg.messageSet": "Leavemsg has been set in $channel",
+    "command.leavemsg.permsErrorUser": "Sorry, you need the ``Manage Guild`` permission to use this command",
+
+
+    "command.eval.name": "eval",
+    "command.eval.description": "Evaluate Javascript Code",
+    "command.eval.usage": "eval <Arguments>",
+
+
+    "command.invite.name": "invite",
+    "command.invite.description": "Create an Invite for a specific server",
+    "command.invite.usage": "invite <Arguments>",
+    "command.invite.serverRequired": "Please specify a server",
+    "command.invite.permsErrorBot": "Sorry, but I got Missing Permissions\nI need the `Create Instant Invite` permission, so I can create Invites",
+
+
+    "command.managecookies.name": "managecookies",
+    "command.managecookies.description": "Manage cookies from a user",
+    "command.managecookies.usage": "managecookies <@Member> <Option> <Number>",
+    "command.managecookies.userRequired": "Which user do you want to manage?",
+    "command.managecookies.isBot": "I can't register Bots",
+    "command.managecookies.validOption": "Please enter a valid option",
+    "command.managecookies.validAmount": "Please enter a valid amount",
+    "command.managecookies.setCookies": "Cookies from $user have been updated! :cookie:",
+
+
+    "command.manageuser.name": "manageuser",
+    "command.manageuser.description": "Manage the profile from a user",
+    "command.manageuser.usage": "manageuser <@Member> <Property> <Value>",
+    "command.manageuser.userRequired": "Which user do you want to manage?",
+    "command.manageuser.isBot": "I can't register Bots",
+    "command.manageuser.propertyRequired": "Please provide a property",
+    "command.manageuser.valueRequired": "Please provide a value",
+    "command.manageuser.validProperty": "Please provide a valid property",
+    "command.manageuser.spaceError": "Cannot set a space for this property",
+    "command.manageuser.validColor": "Please provide a valid color code (#123456)",
+    "command.manageuser.descErrorLength": "Cannot set a description with more than 1024 chars",
+    "command.manageuser.switchErrorLength": "Cannot set a switchfc with more than 17 chars",
+    "command.manageuser.switchErrorStart": "The Switch Friendcode should start with `SW-`",
+    "command.manageuser.overwatchErrorLength": "Cannot set a battletag with more than 128 chars",
+    "command.manageuser.steamErrorLength": "Cannot set a steam username with more than 128 chars",
+    "command.manageuser.valueReset": "$value from $user has been reset",
+    "command.manageuser.valueSet": "$value from $user has been set",
+
+
+    "command.ping.name": "ping",
+    "command.ping.description": "Check the latency from the bot",
+    "command.ping.usage": "ping",
+
+
+    "command.say.name": "say",
+    "command.say.description": "Let the bot say something",
+    "command.say.usage": "say <Arguments>",
+
+
+    "command.serverlist.name": "serverlist",
+    "command.serverlist.description": "Get a list of all servers",
+    "command.serverlist.usage": "serverlist",
+    "command.serverlist.currentServers": "Current Servercount: ",
+
+
+    "command.serverstats.name": "serverstats",
+    "command.serverstats.description": "Get some Information about a specific server",
+    "command.serverstats.usage": "serverstats <Server>",
+    "command.serverstats.ID": "ID",
+    "command.serverstats.Owner": "Owner",
+    "command.serverstats.Humans": "Humans",
+    "command.serverstats.Bots": "Bots",
+    "command.serverstats.serverRequired": "Please specify a server",
+
+
+    "command.uptime.name": "uptime",
+    "command.uptime.description": "Displays the current uptime from the bot",
+    "command.uptime.usage": "uptime",
+    "command.uptime.months": " Month(s), ",
+    "command.uptime.days": " Day(s), ",
+    "command.uptime.hours": " Hour(s), ",
+    "command.uptime.minutes": " Minute(s), ",
+    "command.uptime.seconds": " Second(s), ",
+
+
+    "command.cookies.name": "cookies",
+    "command.cookies.description": "Check how many cookies you or a member has",
+    "command.cookies.usage": "cookies [@Member]",
+    "command.cookies.isBot": "I can't register Bots",
+    "command.cookies.currentCookies": "$user currently has $cookies Cookies :cookie:",
+
+
+    "command.daily.name": "daily",
+    "command.daily.description": "Add's you a random amount of cookies to your profile",
+    "command.daily.usage": "daily",
+    "command.daily.getReward": "You recieved $cookies cookies! :cookie:",
+    "command.daily.claimedReward": "You have already claimed your daily reward\nNext reward in: $timeleft",
+
+
+    "command.givecookies.name": "givecookies",
+    "command.givecookies.description": "Transfer some of your cookies to another user",
+    "command.givecookies.usage": "givecookies <@Member> <Number>",
+    "command.givecookies.userRequired": "Which user should recieve cookies?",
+    "command.givecookies.isBot": "I can't register Bots",
+    "command.givecookies.isUser": "You can't add cookies to yourself",
+    "command.givecookies.cookiesRequired": "How many cookies would you like to transfer?",
+    "command.givecookies.cookiesError": "You don't have enough cookies",
+    "command.givecookies.cookiesTransfered": "$user, you recieved $cookies cookies from $author! :cookie:",
+
+
+    "command.leaderboard.name": "leaderboard",
+    "command.leaderboard.description": "Get a list of the current top 10 users",
+    "command.leaderboard.usage": "leaderboard",
+    "command.leaderboard.title": "Cookie Leaderboard",
+
+
+    "command.monthly.name": "monthly",
+    "command.monthly.description": "Add's you a random amount of cookies to your profile",
+    "command.monthly.usage": "monthly",
+    "command.monthly.getReward": "You recieved $cookies cookies! :cookie:",
+    "command.monthly.claimedReward": "You have already claimed your monthly reward\nNext reward in: $timeleft",
+
+
+    "command.slots.name": "slots",
+    "command.slots.description": "Run the Slot Machine to win cookies\n1 Spin costs 100 cookies",
+    "command.slots.usage": "slots",
+    "command.slots.cookiesError": "You don't have enough cookies",
+    "command.slots.win": "You won $cookies cookies!",
+    "command.slots.lose": "You lost $cookies cookies!",
+    "command.slots.result": "Result:",
+
+
+    "command.weekly.name": "weekly",
+    "command.weekly.description": "Add's you a random amount of cookies to your profile",
+    "command.weekly.usage": "weekly",
+    "command.weekly.getReward": "You recieved $cookies cookies! :cookie:",
+    "command.weekly.claimedReward": "You have already claimed your weekly reward\nNext reward in: $timeleft",
+
+
+    "command.info.name": "info",
+    "command.info.description": "Some additional help",
+    "command.info.usage": "info",
+    "command.info.allPermissions": "All Permissions",
+    "command.info.corePermissions": "Core Permissions",
+    "command.info.noPermissions": "No Permissions",
+    "command.info.support": "Support Server",
+    "command.info.github": "Github Repository",
+    "command.info.glenn": "glennbotlist.xyz",
+    "command.info.discordbotlist": "discordbotlist.com",
+    "command.info.abstractlist": "abstractlist.net",
+    "command.info.botsfordiscord": "botsfordiscord.com",
+    "command.info.invite": "[$invite]($link)",
+    "command.info.programmedBy": "Hey, I was programmed by $owner",
+
+
+    "command.profile.name": "profile",
+    "command.profile.description": "Shows your profile or the profile of a member",
+    "command.profile.usage": "profile [@Member]",
+    "command.profile.isBot": "I can't register Bots",
+
+
+    "command.stats.name": "stats",
+    "command.stats.description": "Shows you some Statistics from the bot",
+    "command.stats.usage": "stats",
+    "command.stats.servercount": "Servercount",
+    "command.stats.usercount": "Usercount",
+    "command.stats.channelcount": "Channelcount",
+    "command.stats.voiceConnections": "Voice Connections",
+    "command.stats.uptime": "Uptime",
+    "command.stats.latency": "Latency",
+    "command.stats.ram": "RAM",
+    "command.stats.cpu": "CPU",
+    "command.stats.createdBy": "Created by $owner in Javascript",
+
+
+    "command.updateprofile.name": "updateprofile",
+    "command.updateprofile.description": "Update your profile with different properties\nValid Properties: ``description, switchfc, battletag, steam, color``\nIf you want to delete a property, enter ``reset`` for the value",
+    "command.updateprofile.usage": "updateprofile <Property> <Value>",
+    "command.updateprofile.validProperty": "Please provide a valid property",
+    "command.updateprofile.spaceError": "You cannot enter a space for this property",
+    "command.updateprofile.validColor": "Please provide a valid color code (#123456)",
+    "command.updateprofile.descErrorLength": "You cannot set a description with more than 1024 chars",
+    "command.updateprofile.switchErrorLength": "You cannot set a switchfc with more than 17 chars",
+    "command.updateprofile.switchErrorStart": "Your Switch Friendcode should start with `SW-`",
+    "command.updateprofile.overwatchErrorLength": "You cannot set a battletag with more than 128 chars",
+    "command.updateprofile.steamErrorLength": "You cannot set a steam username with more than 128 chars",
+    "command.updateprofile.valueReset": "$value has been reset",
+    "command.updateprofile.valueSet": " $value has been set",
+    "command.updateprofile.length": "Please provide a property and it's new value",
+
+
+    "command.hentai.name": "hentai",
+    "command.hentai.description": "Displays a Hentai Image",
+    "command.hentai.usage": "hentai",
+    "command.hentai.noNSFW": "This command may only be invoked in an NSFW channel",
+
+
+    "command.neko.name": "neko",
+    "command.neko.description": "Displays a Neko Image",
+    "command.neko.usage": "neko",
+
+
+    "command.channelinfo.name": "channelinfo",
+    "command.channelinfo.description": "Information about a specific channel",
+    "command.channelinfo.usage": "channelinfo <Channel>",
+    "command.channelinfo.isNSFW.yes": "Yes",
+    "command.channelinfo.isNSFW.no": "No",
+    "command.channelinfo.embed.name": "Name",
+    "command.channelinfo.embed.id": "ID",
+    "command.channelinfo.embed.nsfw": "NSFW",
+    "command.channelinfo.channelNotExist": "This channel does not exist on the server",
+    "command.channelinfo.createdAt": "Created at",
+    "command.channelinfo.channelRequired": "Please specify a channel",
+
+
+    "command.emojiinfo.name": "emojiinfo",
+    "command.emojiinfo.description": "Information about a specific emoji",
+    "command.emojiinfo.usage": "emojiinfo <Emoji>",
+    "command.emojiinfo.isAnimated.yes": "Yes",
+    "command.emojiinfo.isAnimated.no": "No",
+    "command.emojiinfo.embed.name": "Name",
+    "command.emojiinfo.embed.id": "ID",
+    "command.emojiinfo.animated": "Animated",
+    "command.emojiinfo.emojiNotExist": "This emoji does not exist on the server",
+    "command.emojiinfo.createdAt": "Created at",
+    "command.emojiinfo.emojiRequired": "Please specify an emoji",
+
+
+    "command.help.name": "help",
+    "command.help.description": "Displays all commands",
+    "command.help.usage": "help",
+    "command.help.title": "List of all Commands",
+    "command.help.isDM.yes": "Yes",
+    "command.help.isDM.no": "No",
+    "command.help.embed.description": "Description",
+    "command.help.embed.usage": "Command Usage",
+    "command.help.embed.isDM": "DM Compatible",
+    "command.help.embed.cooldown": "Cooldown",
+    "command.help.embed.cooldown.seconds": "Seconds",
+    "command.help.commandNotFound": "There is no help for this command",
+    "command.help.noDev": "Nothing to see here",
+
+
+    "command.roleinfo.name": "roleinfo",
+    "command.roleinfo.description": "Information about a specific role",
+    "command.roleinfo.usage": "roleinfo <Role>",
+    "command.roleinfo.roleNotExist": "This role does not exist on the server",
+    "command.roleinfo.isMentionable.yes": "Yes",
+    "command.roleinfo.isMentionable.no": "No",
+    "command.roleinfo.isHoisted.yes": "Yes",
+    "command.roleinfo.isHoisted.no": "No",
+    "command.roleinfo.isManaged.yes": "Yes",
+    "command.roleinfo.isManaged.no": "No",
+    "command.roleinfo.embed.name": "Name",
+    "command.roleinfo.embed.id": "ID",
+    "command.roleinfo.embed.position": "Position",
+    "command.roleinfo.membersInRole": "Members in Role",
+    "command.roleinfo.color": "Color",
+    "command.roleinfo.mentionable": "Mentionable",
+    "command.roleinfo.hoisted": "Hoisted (Displayed seperately)",
+    "command.roleinfo.managed": "Managed (Bot Role)",
+    "command.roleinfo.createdAt": "Created at",
+    "command.roleinfo.roleRequired": "Please specify a role",
+
+
+    "command.serverinfo.name": "serverinfo",
+    "command.serverinfo.description": "Information about the server",
+    "command.serverinfo.usage": "serverinfo",
+    "command.serverinfo.noEmojis": "No Emojis",
+    "command.serverinfo.noServerIcon": "No Server Icon URL",
+    "command.serverinfo.noSplashIcon": "No Splash Icon URL",
+    "command.serverinfo.verification": "Verification Level",
+    "command.serverinfo.id": "ID",
+    "command.serverinfo.owner": "Owner",
+    "command.serverinfo.members": "Members",
+    "command.serverinfo.humans": "Humans",
+    "command.serverinfo.bots": "Bots",
+    "command.serverinfo.textChannels": "Text Channels",
+    "command.serverinfo.voiceChannels": "Voice Channels",
+    "command.serverinfo.region": "Region",
+    "command.serverinfo.createdAt": "Created at",
+    "command.serverinfo.roles": "Roles",
+    "command.serverinfo.emojis": "Emojis",
+    "command.serverinfo.iconURL": "Icon URL",
+    "command.serverinfo.splashURL": "Splash URL",
+
+
+    "command.userinfo.name": "userinfo",
+    "command.userinfo.description": "Information about you or a specific member",
+    "command.userinfo.usage": "userinfo [@Member]",
+    "command.userinfo.nameAndDis": "Name + Discriminator",
+    "command.userinfo.nickname": "Nickname",
+    "command.userinfo.id": "ID",
+    "command.userinfo.status": "Status",
+    "command.userinfo.activity": "Activity",
+    "command.userinfo.roles": "Roles",
+    "command.userinfo.permissions": "Permissions",
+    "command.userinfo.createdAt": "Created at",
+    "command.userinfo.joinedAt": "Joined at",
+    "command.userinfo.avatar": "Avatar",
+
+
+    "command.ban.name": "ban",
+    "command.ban.description": "Bans a member",
+    "command.ban.usage": "ban <@Member> [Reason]",
+    "command.ban.userRequired": "Mention the user, you want to ban",
+    "command.ban.userNotExist": "This member does not exist on the server",
+    "command.ban.notBannable": "This member is not bannable",
+    "command.ban.banned": "$user was banned from the server",
+    "command.ban.permsErrorUser": "Sorry, you need the ``Ban Members`` permission to use this command",
+    "command.ban.permsErrorBot": "Sorry, but I got Missing Permissions\nGive me the ``Ban Members`` permission, so I can ban members",
+
+
+    "command.banlist.name": "banlist",
+    "command.banlist.description": "Get a list of all bans on the server",
+    "command.banlist.usage": "banlist",
+    "command.banlist.list": "$users users are banned",
+    "command.banlist.permsErrorUser": "Sorry, you need the ``Ban Members`` permission to use this command",
+    "command.banlist.permsErrorBot": "Sorry, but I got Missing Permissions\nGive me the ``Ban Members`` permission, so I can check see the bans",
+
+
+    "command.kick.name": "kick",
+    "command.kick.description": "Kicks a member",
+    "command.kick.usage": "kick <@Member> [Reason]",
+    "command.kick.userRequired": "Mention the user, you want to kick",
+    "command.kick.userNotExist": "This member does not exist on the server",
+    "command.kick.notKickable": "This member is not kickable",
+    "command.kick.kicked": "$user was kicked from the server",
+    "command.kick.permsErrorUser": "Sorry, you need the ``Kick Members`` permission to use this command",
+    "command.kick.permsErrorBot": "Sorry, but I got Missing Permissions\nGive me the ``Kick Members`` permission, so I can kick members",
+
+
+    "command.purge.name": "purge",
+    "command.purge.description": "Deletes a specific amount of messages",
+    "command.purge.usage": "purge <Number>",
+    "command.purge.numberRequired": "How many messages do you want me to delete?",
+    "command.purge.NaN": "Please enter a valid amount",
+    "command.purge.numberLength": "The amount should be 99 or less",
+    "command.purge.deleted": "I deleted $messages messages from this channel :wastebasket:",
+    "command.purge.permsErrorUser": "Sorry, you need the ``Manage Messages`` permission to use this command",
+    "command.purge.permsErrorBot": "Sorry, but I got Missing Permissions\nGive me the ``Manage Messages`` permission, so I can delete messages",
+
+
+    "command.np.name": "np",
+    "command.np.description": "Shows the current song name",
+    "command.np.usage": "np",
+    "command.np.nothingPlaying": "There is nothing playing",
+    "command.np.currentSong": "🎶 Current Song: $song",
+
+
+    "command.pause.name": "pause",
+    "command.pause.description": "Pause the current song",
+    "command.pause.usage": "pause",
+    "command.pause.userNotInChannel": "I'm sorry but you need to be in a voice channel to use the ``pause`` command",
+    "command.pause.botNotInChannel": "I'm sorry but I'm not in your voice channel",
+    "command.pause.paused": "⏸ Paused the music",
+    "command.pause.permsErrorUser": "Sorry, you need the ``Manage Messages`` permission to use this command",
+    "command.pause.nothingPlaying": "There is nothing playing",
+
+
+    "command.play.name": "play",
+    "command.play.description": "Play Music in a voice channel",
+    "command.play.usage": "play <Youtube Link> or <Arguments>",
+    "command.play.userNotInChannel": "I'm sorry, but you need to be in a voice channel to play music",
+    "command.play.permsErrorBotConnect": "Sorry, but I got Missing Permissions\nGive me the ``Connect`` permission, so I can join your voice channel",
+    "command.play.permsErrorBotSpeak": "Sorry, but I got Missing Permissions\nGive me the ``Speak`` permission, so I can speak in your voice channel",
+    "command.play.linkRequired": "Please enter a valid youtube link",
+    "command.play.channel": "Channel",
+    "command.play.duration": "Song Duration",
+    "command.play.addedToQueue": "✅ Added to queue",
+    "command.play.start": "🎶 Start playing",
+    "command.play.joinError": "I could not join the voice channel: $error",
+    "command.play.enterNumber": "Enter a number between 1-$videos",
+
+
+    "command.queue.name": "queue",
+    "command.queue.description": "Get the current queue",
+    "command.queue.usage": "queue",
+    "command.queue.userNotInChannel": "I'm sorry but you need to be in a voice channel to use the ``queue`` command",
+    "command.queue.nothingPlaying": "There is nothing playing",
+    "command.queue.queue": "Queue for $guild",
+
+
+    "command.resume.name": "resume",
+    "command.resume.description": "Resume the current song",
+    "command.resume.usage": "resume",
+    "command.resume.userNotInChannel": "I'm sorry but you need to be in a voice channel to use the ``resume`` command",
+    "command.resume.botNotInChannel": "I'm sorry but I'm not in your voice channel",
+    "command.resume.resumed": "▶ Resumed the music",
+    "command.resume.permsErrorUser": "Sorry, you need the ``Manage Messages`` permission to use this command",
+    "command.resume.nothingPlaying": "There is nothing playing",
+
+
+    "command.skip.name": "skip",
+    "command.skip.description": "Skip to the next song that's queued",
+    "command.skip.usage": "skip",
+    "command.skip.userNotInChannel": "I'm sorry but you need to be in a voice channel to use the ``skip`` command",
+    "command.skip.botNotInChannel": "I'm sorry but I'm not in your voice channel",
+    "command.skip.nothingPlaying": "There is nothing playing that I could skip",
+    "command.skip.voted": "$user, you already voted\nCurrent Votes: $votes",
+    "command.skip.skipped": "⏩ Skipped",
+    "command.skip.votes": "Current Votes: $votes",
+
+
+    "command.stop.name": "stop",
+    "command.stop.description": "Stop the current song",
+    "command.stop.usage": "stop",
+    "command.stop.userNotInChannel": "I'm sorry but you need to be in a voice channel to use the ``stop`` command",
+    "command.stop.botNotInChannel": "I'm sorry but I'm not in your voice channel",
+    "command.stop.nothingPlaying": "There is nothing playing that I could stop",
+    "command.stop.stopped": "⏹️ Stopped the music",
+    "command.stop.permsErrorUser": "Sorry, you need the ``Manage Guild`` permission to use this command",
+
+
+    "command.baka.name": "baka",
+    "command.baka.description": "Call someone a baka",
+    "command.baka.usage": "baka <@Member>",
+    "command.baka.selfUser": "Don't say that to yourself :(",
+    "command.baka.userRequired": "Who would you like to call a baka?",
+    "command.baka.baka": "$user you baka!",
+
+
+    "command.cuddle.name": "cuddle",
+    "command.cuddle.description": "Who doesn't like cuddles?",
+    "command.cuddle.usage": "cuddle <@Member>",
+    "command.cuddle.selfUser": "You cannot cuddle yourself",
+    "command.cuddle.userRequired": "Who would you like to cuddle?",
+    "command.cuddle.cuddle": "$user you got cuddled by $member",
+    
+
+    "command.hug.name": "hug",
+    "command.hug.description": "Who said that you can't hug people through Discord?",
+    "command.hug.usage": "hug <@Member>",
+    "command.hug.selfUser": "You cannot hug yourself",
+    "command.hug.userRequired": "Who would you like to hug?",
+    "command.hug.hug": "$user you got hugged by $member",
+
+
+    "command.kiss.name": "kiss",
+    "command.kiss.description": "Kiss someone",
+    "command.kiss.usage": "kiss <@Member>",
+    "command.kiss.selfUser": "You cannot kiss yourself",
+    "command.kiss.userRequired": "Who would you like to kiss?",
+    "command.kiss.kiss": "$user you got kissed by $member",
+
+
+    "command.pat.name": "pat",
+    "command.pat.description": "Who doesn't love pats?",
+    "command.pat.usage": "pat <@Member>",
+    "command.pat.selfUser": "You cannot pat yourself",
+    "command.pat.userRequired": "Who would you like to pat?",
+    "command.pat.pat": "$user you got patted by $member",
+
+
+    "command.poke.name": "poke",
+    "command.poke.description": "Poke whoever you want!",
+    "command.poke.usage": "poke <@Member>",
+    "command.poke.selfUser": "You cannot poke yourself",
+    "command.poke.userRequired": "Who would you like to poke?",
+    "command.poke.poke": "$user you got poked by $member",
+
+
+    "command.slap.name": "slap",
+    "command.slap.description": "Use this command to virtually slap your friends!",
+    "command.slap.usage": "slap <@Member>",
+    "command.slap.selfUser": "You cannot slap yourself",
+    "command.slap.userRequired": "Who would you like to slap?",
+    "command.slap.slap": "$user you got slapped by $member",
+
+
+    "command.devmessage.name": "devmessage",
+    "command.devmessage.description": "Contact the bot owner if you have any questions, suggestions, feedback or bug reports",
+    "command.devmessage.usage": "devmessage <Message>",
+    "command.devmessage.sent": "Your message was sent",
+    "command.devmessage.messageRequired": "Please enter a Message that the developer should recieve",
+
+
+    "command.emoji.name": "emoji",
+    "command.emoji.description": "Get a specific emoji as a link",
+    "command.emoji.usage": "emoji <Emoji>",
+    "command.emoji.emojiNotExist": "This emoji does not exist on the server",
+    "command.emoji.emojiRequired": "Please specify an emoji",
+
+
+    "command.list.name": "list",
+    "command.list.description": "Displays a list of different items on the server\nThe item name should be written as lowercase letters",
+    "command.list.usage": "list <Emojis> or <Roles> or <Channels>",
+    "command.list.validItem": "Please enter one available Option",
+    "command.list.roles": "Roles: $roles",
+    "command.list.emojis": "Emojis: $emojis",
+    "command.list.channels": "Channels: $channels",
+
+
+    "command.randomcolor.name": "randomcolor",
+    "command.randomcolor.description": "Get a random hex code",
+    "command.randomcolor.usage": "randomcolor",
+    "command.randomcolor.colorCodeTitle": "This is your Color Code:",
+    "command.randomcolor.colorCode": "$color\n\n:arrow_left: You can see the color on the left side of the embed",
+
+
+    "command.skid.name": "skid",
+    "command.skid.description": "You want to know how stuff works?\nUse this command\nThe category and the command name must be written as lowercase letters",
+    "command.skid.usage": "skid <Command>",
+    "command.skid.code": "If this code is not displayed correctly, check it out on github!",
+    "command.skid.itemsRequired": "Please enter the category and the command",
+
+
+    "command.urban.name": "urban",
+    "command.urban.description": "Grabs a definition from the urban dictionary",
+    "command.urban.usage": "urban <Arguments>",
+    "command.urban.noResult": "No results found",
+    "command.urban.definitionRequired": "Please enter a definition",
+    "command.urban.noNSFW": "This command may only be invoked in an NSFW channel"
+}
