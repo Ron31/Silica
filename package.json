@@ -1,5 +1,5 @@
 {
-	"name": "silicia",
+	"name": "silica",
 	"version": "2.1",
 	"description": "A cool little bot with commands for gamers, server owners and developers.",
 	"main": "src/main.js",

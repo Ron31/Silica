@@ -25,7 +25,7 @@ module.exports = {
             ],
             [
                 await client.string(message.guild.id, "command.info.github"),
-                (await client.string(message.guild.id, "command.info.invite")).replace("$invite", "Link").replace("$link", "https://github.com/newtox/Silicia"),
+                (await client.string(message.guild.id, "command.info.invite")).replace("$invite", "Link").replace("$link", "https://github.com/newtox/Silica"),
             ],
             [
                 await client.string(message.guild.id, "command.info.glenn"),

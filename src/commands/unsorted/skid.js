@@ -10,7 +10,7 @@ module.exports = {
 
         let folder = args[0];
         let command = args.slice(1).join(" ");
-        let link = ("https://github.com/newtox/Silicia/tree/master/src/commands/" + `${folder}/` + command + ".js").toString();
+        let link = ("https://github.com/newtox/Silica/tree/master/src/commands/" + `${folder}/` + command + ".js").toString();
 
         try {
             if (folder && command) {

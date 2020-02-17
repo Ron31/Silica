@@ -1,6 +1,6 @@
 # Hey there!
 
-#### My Name is Silicia
+#### My Name is Silica
 
 **I would like to show you some of my features:**
 
