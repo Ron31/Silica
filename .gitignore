@@ -13,12 +13,8 @@ pids
 
 # Env
 .env
+.eslintrc.json
 
 # Miscellaneous
 .tmp/
 .github/
-
-# Scripts
-start.bat
-restart.bat
-stop.bat
