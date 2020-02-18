@@ -1,7 +1,7 @@
 module.exports = {
-    name: "list",
-    description: "Displays a list of different items on the server\nThe item name should be written as lowercase letters",
-    usage: "list <Emojis> or <Roles> or <Channels>",
+    name: "command.list.name",
+    description: "command.list.description",
+    usage: "command.list.usage",
     args: true,
     dm: false,
     cooldown: 5,

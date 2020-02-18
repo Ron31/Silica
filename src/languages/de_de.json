@@ -364,7 +364,7 @@
     "command.kick.userRequired": "Erwähne den Benutzer, den du kicken möchtest",
     "command.kick.userNotExist": "Dieser Benutzer existiert nicht auf dem Server",
     "command.kick.notKickable": "Dieser Benutzer ist nicht kickbar",
-    "command.kick.banned": "$user wurde vom Server gekickt",
+    "command.kick.kicked": "$user wurde vom Server gekickt",
     "command.kick.permsErrorUser": "Sorry, aber du brauchst die ``Mitglieder kicken`` Berechtigung um diesen Befehl ausführen zu können",
     "command.kick.permsErrorBot": "Sorry, aber Ich hab fehlende Berechtigungen\nIch brauche die ``Mitglieder kicken`` Berechtigung, damit ich Benutzer kicken kann",
 

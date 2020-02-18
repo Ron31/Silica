@@ -16,7 +16,7 @@ module.exports = {
             if (folder && command) {
                 var commandskid = fs.readFileSync(`src/commands/${folder}/${command}.js`).toString();
                 message.channel.send("\`\`\`js\n" + commandskid.substr(0, 1900) + "\`\`\`");
-                return Embeds.success(message.channel, `[${command}.js](${link})`, await client.string(message.guild.id, "command.string.code"));
+                return Embeds.success(message.channel, `[${command}.js](${link})`, await client.string(message.guild.id, "command.skid.code"));
             } else {
                 return Embeds.error(message.channel, await client.string(message.guild.id, "command.skid.itemsRequired"));
             }

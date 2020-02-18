@@ -6,7 +6,7 @@ module.exports = {
     dm: true,
     cooldown: 5,
     async execute(message, args, client, Embeds) {
-        client.con.query("SELECT userid, cookies FROM users ORDER BY cookies DESC LIMIT 10hd+", [], async (e, r) => {
+        client.con.query("SELECT userid, cookies FROM users ORDER BY cookies DESC LIMIT 10;", [], async (e, r) => {
             if (e) {
                 return Embeds.error(message.channel, "\`\`\`js\n" + e + "\`\`\`");
             }
