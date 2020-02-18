@@ -12,7 +12,7 @@
 
 
     "command.language.name": "language",
-    "command.language.description": "Lege die Sprache des Bots fest",
+    "command.language.description": "Lege die Sprache des Bots fest\nVerfügbare Sprachen: ``en_us``, ``de_de``",
     "command.language.usage": "language <Sprache>",
     "command.language.validLang": "Bitte gib eine gültige Sprache an",
     "command.language.set": "Sprache wurde zu $lang geändert",
