@@ -400,6 +400,7 @@
     "command.play.name": "play",
     "command.play.description": "Spiele Musik im aktuellen Sprachkanal",
     "command.play.usage": "play <Youtube Link> oder <Argumente>",
+    "command.play.commandError": "Tut mir leid das sagen zu müssen, aber mein Prozess läuft aktuell auf einer alten Version eines Raspberry Pi's\nDeswegen kann ich nicht mit ``ytdl-core`` interagieren\nBitte versuche es später erneut",
     "command.play.userNotInChannel": "Sorry, aber du musst dich in einem Sprachkanal befinden um Musik abspielen zu können",
     "command.play.permsErrorBotConnect": "Sorry, aber Ich hab fehlende Berechtigungen\nIch brauche die ``Verbinden`` Berechtigung, damit Ich deinem Sprachkanal beitreten kann",
     "command.play.permsErrorBotSpeak": "Sorry, aber Ich hab fehlende Berechtigungen\nIch brauche die ``Mitglieder kicken`` Berechtigung, damit Ich in deinem Sprachakanal sprechen kann",

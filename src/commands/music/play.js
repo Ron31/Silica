@@ -10,9 +10,13 @@ module.exports = {
 			Util
 		} = require("discord.js");
 		const ytdl = require("ytdl-core");
+		const os = require("os");
 		const {
 			voiceChannel
 		} = message.member;
+		if (os.cpus()[0].model.split("@")[0] == "ARMv7 Processor rev 4 (v7l)") {
+			return Embeds.error(message.channel, await client.string(message.guild.id, "command.play.commandError"));
+		}
 		if (!voiceChannel) {
 			return Embeds.notice(message.channel, await client.string(message.guild.id, "command.play.userNotInChannel"));
 		}

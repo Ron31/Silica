@@ -400,6 +400,7 @@
     "command.play.name": "play",
     "command.play.description": "Play Music in a voice channel",
     "command.play.usage": "play <Youtube Link> or <Arguments>",
+    "command.play.commandError": "I'm sorry to say that, but my process is currently running on an old Raspberry Pi\nThat's why I'm not able to interact with ``ytdl-core``\nPlease try again later",
     "command.play.userNotInChannel": "I'm sorry, but you need to be in a voice channel to play music",
     "command.play.permsErrorBotConnect": "Sorry, but I got Missing Permissions\nGive me the ``Connect`` permission, so I can join your voice channel",
     "command.play.permsErrorBotSpeak": "Sorry, but I got Missing Permissions\nGive me the ``Speak`` permission, so I can speak in your voice channel",
