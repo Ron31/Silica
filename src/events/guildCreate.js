@@ -40,5 +40,8 @@ module.exports = async (client, guild) => {
             true
         ]
     ]
-    return Embeds.uni(channel, "Joined Server", `${client.user.username} Logs`, contents, "", ServerIcon, 0x00FF00);
+    Embeds.uni(channel, "Joined Server", `${client.user.username} Logs`, contents, "", ServerIcon, 0x00FF00);
+
+
+   return Embeds.uni(guild.channels.filter(channels => channels.type == "text").first(), `${client.user.username} is a bot made by ${client.users.get(client.config.owner).username}\nFor a list of all commands use \`\`s+help\`\`\n\nIf you want to change the language, then use the s+language command`, `${client.user.username} has been successfully added to this server`);
 }
