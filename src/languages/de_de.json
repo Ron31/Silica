@@ -144,7 +144,7 @@
     "command.givecookies.isUser": "Du kannst dir selbst keine Cookies geben",
     "command.givecookies.cookiesRequired": "Wieviele Cookies willst du abgeben?",
     "command.givecookies.cookiesError": "Du hast nicht genug Cookies",
-    "command.givecookies.cookiesTransfered": "$user, you recieved $cookies cookies from $author! :cookie:",
+    "command.givecookies.cookiesTransfered": "$user, du hast $cookies Cookies von $author erhalten! :cookie:",
 
 
     "command.leaderboard.name": "leaderboard",
@@ -206,7 +206,7 @@
     "command.stats.channelcount": "Kanalanzahl",
     "command.stats.voiceConnections": "Sprachchat Verbindungen",
     "command.stats.uptime": "Betriebszeit",
-    "command.stats.latency": "Verbindung",
+    "command.stats.latency": "Latenz",
     "command.stats.ram": "RAM",
     "command.stats.cpu": "CPU",
     "command.stats.createdBy": "Erstellt von $owner in Javascript",

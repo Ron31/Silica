@@ -51,10 +51,10 @@ module.exports = {
                 }
                 if (!r[0]) {
                     client.con.query("INSERT INTO settings(guildid, roleid, leavechannelid, leavemessage, joinchannelid, joinmessage) VALUES (?, null, ?, ?, null, null)", [message.guild.id, channel.id, leavemsg]);
-                    return Embeds.success(message.channel, await client.string(message.guild.id, "command.leavemsg.messageSet") + channel);
+                    return Embeds.success(message.channel, (await client.string(message.guild.id, "command.leavemsg.messageSet")).replace("$channel", channel));
                 } else {
                     client.con.query("UPDATE settings SET leavechannelid = ?, leavemessage = ? WHERE guildid = ?", [channel.id, leavemsg, message.guild.id]);
-                    return Embeds.success(message.channel, await client.string(message.guild.id, "command.leavemsg.messageSet") + channel);
+                    return Embeds.success(message.channel, (await client.string(message.guild.id, "command.leavemsg.messageSet")).replace("$channel", channel));
                 }
             });
         }

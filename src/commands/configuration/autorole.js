@@ -30,18 +30,18 @@ module.exports = {
                         }
                         if (role) {
                             client.con.query("INSERT INTO settings(guildid, roleid, joinchannelid, joinmessage, leavechannelid, leavemessage) VALUES (?, ?, null, null, null, null)", [message.guild.id, role.id]);
-                            return Embeds.success(message.channel, await client.string(message.guild, "command.autorole.roleSet").replace("$autorole", message.guild.roles.get(r[0].roleid)));
+                            return Embeds.success(message.channel, (await client.string(message.guild.id, "command.autorole.roleSet")).replace("$autorole", message.guild.roles.get(r[0].roleid)));
                         }
                     } else if (args[0] == "delete") {
-                        client.con.query("UPDATE settings SET roleid = ? WHERE guildid = ?", ["null", message.guild.id]);
+                        client.con.query("UPDATE settings SET roleid = ? WHERE guildid = ?", [null, message.guild.id]);
                         return Embeds.success(message.channel, await client.string(message.guild.id, "command.autorole.roleDeleted"));
                     } else if (r[0]) {
                         client.con.query("UPDATE settings SET roleid = ? WHERE guildid = ?", [role.id, message.guild.id]);
-                        return Embeds.success(message.channel, role + await client.string(message.guild, "command.autorole.roleSet"));
+                        return Embeds.success(message.channel, (await client.string(message.guild.id, "command.autorole.roleSet")).replace("$autorole", message.guild.roles.get(r[0].roleid)));
                     }
                 });
             } else {
-                return Embeds.error(message.channel, await client.string(message.guild, "command.autorole.permsErrorUser"));
+                return Embeds.error(message.channel, await client.string(message.guild.id, "command.autorole.permsErrorUser"));
             }
         } else {
             return Embeds.error(message.channel, await client.string(message.guild.id, "command.autorole.permsErrorBot"));
