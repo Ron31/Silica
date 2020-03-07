@@ -7,7 +7,7 @@ module.exports = {
     owner: true,
     cooldown: 2,
     async execute(message, args, client, Embeds) {
-        let target = message.mentions.members.first() || message.guild.members.get(args[0]);
+        let target = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
         let option = args[1];
         let newCookies = parseInt(args[2]);
 
@@ -30,10 +30,10 @@ module.exports = {
                 }
                 if (args[1] == "-") {
                     client.con.query("UPDATE users SET cookies = ? WHERE userid = ?", [r[0].cookies - newCookies, target.id]);
-                    return Embeds.success(message.channel, await client.string(message.guild.id, "command.managecookies.setCookies")).replace("$user", target.user.tag);
+                    return Embeds.success(message.channel, (await client.string(message.guild.id, "command.managecookies.setCookies")).replace("$user", target.user.tag));
                 } else {
                     client.con.query("UPDATE users SET cookies = ? WHERE userid = ?", [r[0].cookies + newCookies, target.id]);
-                    return Embeds.success(message.channel, await client.string(message.guild.id, "command.managecookies.setCookies")).replace("$user", target.user.tag);
+                    return Embeds.success(message.channel, (await client.string(message.guild.id, "command.managecookies.setCookies")).replace("$user", target.user.tag));
                 }
             } else {
                 if (target.user.bot == true) {

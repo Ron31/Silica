@@ -6,7 +6,7 @@ module.exports = {
     dm: true,
     cooldown: 5,
     async execute(message, args, client, Embeds) {
-        let target = (message.channel.type == "dm") ? message.author : (message.mentions.members.first() || message.guild.members.get(args[0]) || message.member).user;
+        let target = (message.channel.type == "dm") ? message.author : (message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member).user;
 
         if (target.bot == true) {
             return Embeds.error(message.channel, "I can't register Bots");

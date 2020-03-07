@@ -19,11 +19,11 @@ module.exports = {
                 return Embeds.error(message.channel, await client.string(message.guild.id, "command.list.validItem"));
             }
             if (args.join(" ") === "roles") {
-                return Embeds.uni(message.channel, message.guild.roles.sort(compare).map(roles => roles).join(",\n").substr(0, 2000), (await client.string(message.guild.id, "command.list.roles")).replace("$roles", message.guild.roles.size), "", "", "", 0x7289DA);
+                return Embeds.uni(message.channel, message.guild.roles.cache.sort(compare).map(roles => roles).join(",\n").substr(0, 2000), (await client.string(message.guild.id, "command.list.roles")).replace("$roles", message.guild.roles.cache.size), "", "", "", 0x7289DA);
             } else if (args.join(" ") === "emojis") {
-                return Embeds.uni(message.channel, message.guild.emojis.sort(compare).map(emojis => emojis).join("").substr(0, 2000), (await client.string(message.guild.id, "command.list.emojis")).replace("$emojis", message.guild.emojis.size), "", "", "", 0x7289DA);
+                return Embeds.uni(message.channel, message.guild.emojis.cache.sort(compare).map(emojis => emojis).join("").substr(0, 2000), (await client.string(message.guild.id, "command.list.emojis")).replace("$emojis", message.guild.emojis.cache.size), "", "", "", 0x7289DA);
             } else if (args.join(" ") === "channels") {
-                return Embeds.uni(message.channel, message.guild.channels.sort(compare).map(channels => channels).join(",\n").substr(0, 2000), (await client.string(message.guild.id, "command.list.channels")).replace("$channels", message.guild.channels.size), "", "", "", 0x7289DA);
+                return Embeds.uni(message.channel, message.guild.channels.cache.sort(compare).map(channels => channels).join(",\n").substr(0, 2000), (await client.string(message.guild.id, "command.list.channels")).replace("$channels", message.guild.channels.cache.size), "", "", "", 0x7289DA);
             }
         } else {
             return Embeds.notice(message.channel, await client.string(message.guild.id, "command.list.validItem"));

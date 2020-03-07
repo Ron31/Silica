@@ -10,7 +10,7 @@ module.exports = {
         if (message.guild.me.hasPermission("CREATE_INSTANT_INVITE")) {
             if (args.join(" ") !== "") {
                 try {
-                    client.guilds.get(client.guilds.find(server => server.name === args.join(" ")).id).channels.filter(channels => channels.type == "text").first().createInvite().then(invite => {
+                    client.guilds.cache.get(client.guilds.cache.find(server => server.name === args.join(" ")).id).channels.cache.filter(channels => channels.type == "text").first().createInvite().then(invite => {
                         return Embeds.success(message.channel, invite.url);
                     });
                 } catch (e) {

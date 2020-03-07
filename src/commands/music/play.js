@@ -11,9 +11,7 @@ module.exports = {
 		} = require("discord.js");
 		const ytdl = require("ytdl-core");
 		const os = require("os");
-		const {
-			voiceChannel
-		} = message.member;
+		const voiceChannel = message.member.voice.channel;
 		if (os.cpus()[0].model.split("@")[0] == "ARMv7 Processor rev 4 (v7l)") {
 			return Embeds.error(message.channel, await client.string(message.guild.id, "command.play.commandError"));
 		}
@@ -91,7 +89,7 @@ module.exports = {
 				return;
 			}
 
-			const dispatcher = queue.connection.playStream(await ytdl(song.url), {
+			const dispatcher = queue.connection.play(await ytdl(song.url), {
 					passes: 3
 				})
 				.on("end", reason => {
@@ -127,7 +125,7 @@ module.exports = {
 		} catch (e) {
 			message.client.queue.delete(message.guild.id);
 			await voiceChannel.leave();
-			return Embeds.error(message.channel, (await client.string(message.guild.id, "command.play.joinError")).replace("$error", e));
+			return Embeds.error(message.channel, (await client.string(message.guild.id, "command.play.joinError")).replace("$error", "\`\`\`js\n" + e + "\`\`\`"));
 		}
 	}
 }

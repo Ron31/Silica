@@ -15,27 +15,27 @@ module.exports = {
         let hours = t.getUTCHours();
         let seconds = t.getUTCSeconds();
         let uptime = `${months}mo, ${days}d, ${hours}h, ${minutes}m, ${seconds}s`;
-        let ping = `${Math.round(client.ping)}ms`;
+        let ping = `${Math.round(client.ws.ping)}ms`;
 
         let contents = [
             [
                 await client.string(message.guild.id, "command.stats.servercount"),
-                client.guilds.size,
+                client.guilds.cache.size,
                 true
             ],
             [
                 await client.string(message.guild.id, "command.stats.usercount"),
-                client.users.size,
+                client.users.cache.size,
                 true
             ],
             [
                 await client.string(message.guild.id, "command.stats.channelcount"),
-                client.channels.size,
+                client.channels.cache.size,
                 true
             ],
             [
                 await client.string(message.guild.id, "command.stats.voiceConnections"),
-                client.voiceConnections.size,
+                client.voice.connections.size,
                 true
             ],
             [
@@ -59,6 +59,6 @@ module.exports = {
                 false
             ]
         ]
-        return Embeds.uni(message.channel, (await client.string(message.guild.id, "command.stats.createdBy")).replace("$owner", client.users.get(client.config.owner).tag), "", contents, "", "https://cdn.discordapp.com/attachments/525393611261739040/635473876578467840/js.png", 0x7289DA);
+        return Embeds.uni(message.channel, (await client.string(message.guild.id, "command.stats.createdBy")).replace("$owner", client.users.cache.get(client.config.owner).tag), "", contents, "", "https://cdn.discordapp.com/attachments/525393611261739040/635473876578467840/js.png", 0x7289DA);
     }
 }

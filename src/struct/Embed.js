@@ -9,28 +9,28 @@ const COLORS = {
 
 module.exports = {
     error: (channel, description) => {
-        var embed = new Discord.RichEmbed()
+        var embed = new Discord.MessageEmbed()
             .setColor(COLORS.error)
             .setDescription(description);
 
         return channel.send(embed);
     },
     dev: (channel) => {
-        var embed = new Discord.RichEmbed()
+        var embed = new Discord.MessageEmbed()
             .setColor(COLORS.dev)
             .setDescription("Sorry, this command can only be run by the owner of the bot");
 
         return channel.send(embed);
     },
     notice: (channel, description) => {
-        var embed = new Discord.RichEmbed()
+        var embed = new Discord.MessageEmbed()
             .setColor(COLORS.notice)
             .setDescription(description);
 
         return channel.send(embed);
     },
     success: (channel, description, title, image) => {
-        var embed = new Discord.RichEmbed()
+        var embed = new Discord.MessageEmbed()
             .setColor(COLORS.success)
             .setTitle(title || "")
             .setDescription(description || "")
@@ -39,7 +39,7 @@ module.exports = {
         return channel.send(embed);
     },
     uni: (channel, description, title, contents, image, thumbnail, color) => {
-        var embed = new Discord.RichEmbed()
+        var embed = new Discord.MessageEmbed()
             .setColor(color || 0x7289DA)
             .setTitle(title || "")
             .setDescription(description || "")

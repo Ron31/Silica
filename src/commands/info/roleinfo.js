@@ -8,7 +8,7 @@ module.exports = {
     async execute(message, args, client, Embeds) {
         const moment = require("moment");
 
-        let role = message.guild.roles.find(role => role.name === args.join(" "));
+        let role = message.guild.roles.cache.find(role => role.name === args.join(" "));
 
         if (args.join(" ") !== "") {
             if (!role) {

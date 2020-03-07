@@ -3,7 +3,7 @@ module.exports = async (client, member) => {
         if (!r[0] || r[0].leavechannelid == null) {
             return;
         } else {
-            member.guild.channels.get(r[0].leavechannelid).send(r[0].leavemessage.replace("{user}", `${member.user.tag} [${member}]`).replace("{guild}", member.guild.name));
+            member.guild.channels.cache.get(r[0].leavechannelid).send(r[0].leavemessage.replace("{user}", `${member.user.tag} [${member}]`).replace("{guild}", member.guild.name));
         }
     });
 }

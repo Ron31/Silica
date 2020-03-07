@@ -1,7 +1,7 @@
 module.exports = async (client, guild) => {
     const Embeds = require("../struct/Embed.js");
 
-    let channel = client.channels.get("676179617362739227");
+    let channel = client.channels.cache.get("676179617362739227");
     let ServerIcon = "";
 
     if (guild.iconURL) {
@@ -26,17 +26,17 @@ module.exports = async (client, guild) => {
         ],
         [
             "Members",
-            guild.members.size,
+            guild.members.cache.size,
             true
         ],
         [
             "New Membercount",
-            client.users.size,
+            client.users.cache.size,
             true
         ],
         [
             "New Servercount",
-            client.guilds.size,
+            client.guilds.cache.size,
             true
         ]
     ]

@@ -6,7 +6,7 @@ module.exports = {
     dm: false,
     cooldown: 5,
     async execute(message, args, client, Embeds) {
-        let target = message.mentions.members.first() || message.guild.members.get(args[0]);
+        let target = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
         let newCookies = parseInt(args[1]);
 
         client.con.query("SELECT * FROM users WHERE userid = ? LIMIT 1;", [message.author.id], async (e1, r1) => {

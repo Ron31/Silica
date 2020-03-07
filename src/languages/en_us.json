@@ -409,7 +409,7 @@
     "command.play.duration": "Song Duration",
     "command.play.addedToQueue": "✅ Added to queue",
     "command.play.start": "🎶 Start playing",
-    "command.play.joinError": "I could not join the voice channel: $error",
+    "command.play.joinError": "$error",
     "command.play.enterNumber": "Enter a number between 1-$videos",
 
 

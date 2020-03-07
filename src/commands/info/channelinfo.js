@@ -8,7 +8,7 @@ module.exports = {
     async execute(message, args, client, Embeds) {
         const moment = require("moment");
 
-        let channel = message.guild.channels.find(channel => channel.name === args.join(" "));
+        let channel = message.guild.channels.cache.find(channel => channel.name === args.join(" "));
 
         if (args.join(" ") !== "") {
             if (!channel) {

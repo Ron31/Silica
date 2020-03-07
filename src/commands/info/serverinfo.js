@@ -20,26 +20,26 @@ module.exports = {
         let IconForEmbed = "";
         let SplashIcon = "";
 
-        if (message.member.highestRole.color == 0x000000) {
+        if (message.member.roles.highest.color == 0x000000) {
             UserGotColor = 0x7289DA;
         } else {
-            UserGotColor = message.member.highestRole.color;
+            UserGotColor = message.member.roles.highest.color;
         }
         if (message.guild.emojis.size > 0) {
             EmojisOnServer = message.guild.emojis.sort(compare).map(emojis => emojis).join("").substr(0, 1000);
         } else {
             EmojisOnServer = await client.string(message.guild.id, "command.serverinfo.noEmojis");
         }
-        if (message.guild.iconURL) {
-            ServerIcon = message.guild.iconURL;
+        if (message.guild.iconURL()) {
+            ServerIcon = message.guild.iconURL();
         }
-        if (message.guild.iconURL) {
-            IconForEmbed = message.guild.iconURL;
+        if (message.guild.iconURL()) {
+            IconForEmbed = message.guild.iconURL();
         } else {
             IconForEmbed = await client.string(message.guild.id, "command.serverinfo.noServerIcon");
         }
-        if (message.guild.splashURL) {
-            SplashIcon = message.guild.splashURL;
+        if (message.guild.splashURL()) {
+            SplashIcon = message.guild.splashURL();
         } else {
             SplashIcon = await client.string(message.guild.id, "command.serverinfo.noSplashIcon");
         }
@@ -57,32 +57,32 @@ module.exports = {
             ],
             [
                 await client.string(message.guild.id, "command.serverinfo.verification"),
-                Vars.verification[message.guild.verificationLevel],
+                message.guild.verificationLevel,
                 true
             ],
             [
                 await client.string(message.guild.id, "command.serverinfo.members"),
-                message.guild.members.size,
+                message.guild.members.cache.size,
                 true
             ],
             [
                 await client.string(message.guild.id, "command.serverinfo.humans"),
-                message.guild.members.filter(members => !members.user.bot).size,
+                message.guild.members.cache.filter(members => !members.user.bot).size,
                 true
             ],
             [
                 await client.string(message.guild.id, "command.serverinfo.bots"),
-                message.guild.members.filter(members => members.user.bot).size,
+                message.guild.members.cache.filter(members => members.user.bot).size,
                 true
             ],
             [
                 await client.string(message.guild.id, "command.serverinfo.textChannels"),
-                message.guild.channels.filter(channels => channels.type == "text").size,
+                message.guild.channels.cache.filter(channels => channels.type == "text").size,
                 true
             ],
             [
                 await client.string(message.guild.id, "command.serverinfo.voiceChannels"),
-                message.guild.channels.filter(channels => channels.type == "voice").size,
+                message.guild.channels.cache.filter(channels => channels.type == "voice").size,
                 true
             ],
             [
@@ -97,7 +97,7 @@ module.exports = {
             ],
             [
                 await client.string(message.guild.id, "command.serverinfo.roles"),
-                message.guild.roles.sort(compare).map(roles => roles).join(", ").substr(0, 1000),
+                message.guild.roles.cache.sort(compare).map(roles => roles).join(", ").substr(0, 1000),
                 false
             ],
             [

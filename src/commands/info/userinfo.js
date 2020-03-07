@@ -9,7 +9,7 @@ module.exports = {
         const Discord = require("discord.js");
         const moment = require("moment");
 
-        let target = message.mentions.members.first() || message.guild.members.get(args[0]) || message.member;
+        let target = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
         let perms = [];
 
         let compare = (a, b) => {
@@ -31,29 +31,25 @@ module.exports = {
                 let UserGotActivity = "";
                 let UserGotAvatar = "";
 
-                if (target.highestRole.color == 0x000000) {
+                if (target.roles.highest.color == 0x000000) {
                     UserGotColor = 0x7289DA;
                 } else {
-                    UserGotColor = target.highestRole.color;
+                    UserGotColor = target.roles.highest.color;
                 }
                 if (target.user.username != target.displayName) {
                     UserGotNickname = target.displayName;
                 } else {
                     UserGotNickname = "-";
                 }
-                if (target.presence.game) {
-                    if (target.user.presence.game.type == "4") {
-                        UserGotActivity = `${target.user.presence.game.name}: ${target.user.presence.game.state}`;
-                    } else {
-                        UserGotActivity = `${Vars.activity[target.user.presence.game.type]} ${target.user.presence.game.name}`;
-                    }
+                if (target.user.presence.activities) {
+                    UserGotActivity = `${target.user.presence.activities}`;
                 } else {
                     UserGotActivity = "-";
                 }
-                if (target.user.avatarURL) {
-                    UserGotAvatar = target.user.avatarURL;
+                if (target.user.avatarURL()) {
+                    UserGotAvatar = target.user.avatarURL();
                 } else {
-                    UserGotAvatar = target.user.defaultAvatarURL;
+                    UserGotAvatar = target.user.defaultAvatarURL();
                 }
 
                 let contents = [
@@ -84,7 +80,7 @@ module.exports = {
                     ],
                     [
                         await client.string(message.guild.id, "command.userinfo.roles"),
-                        target.roles.sort(compare).map(roles => roles).join(", ").substr(0, 900) || `-`,
+                        target.roles.cache.sort(compare).map(roles => roles).join(", ").substr(0, 900) || `-`,
                         false
                     ],
                     [

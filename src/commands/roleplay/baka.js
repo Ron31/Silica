@@ -10,7 +10,7 @@ module.exports = {
         const Neko = new NekoClient;   
          
         let image = await Neko.sfw.baka().then(img => img.url);
-        let target = message.mentions.members.first() || message.guild.members.get(args[0]);
+        let target = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     
         if (target == message.member) {
             return Embeds.error(message.channel, await client.string(message.guild.id, "command.baka.selfUser"));

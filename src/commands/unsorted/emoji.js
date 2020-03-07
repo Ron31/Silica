@@ -7,7 +7,7 @@ module.exports = {
     cooldown: 5,
     async execute(message, args, client, Embeds) {
         if (args.join(" ") !== "") {
-            const emote = message.guild.emojis.find(emoji => emoji.name === args.join(" "));
+            const emote = message.guild.emojis.cache.find(emoji => emoji.name === args.join(" "));
             if (emote) {
                 return message.channel.send(emote.url);
             } else {

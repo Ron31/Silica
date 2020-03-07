@@ -7,6 +7,6 @@ module.exports = {
     owner: true,
     cooldown: 2,
     async execute(message, args, client, Embeds) {
-        return Embeds.success(message.channel, `${Math.round(client.ping)}ms`);
+        return Embeds.success(message.channel, `${Math.round(client.ws.ping)}ms`);
     }
 }

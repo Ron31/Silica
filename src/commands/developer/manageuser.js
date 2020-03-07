@@ -17,7 +17,7 @@ module.exports = {
             "steam": "Steam Username"
         }
 
-        let target = message.mentions.members.first() || message.guild.members.get(args[0]);
+        let target = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
         let value = args[1];
         let text = args.slice(2).join(" ");
 

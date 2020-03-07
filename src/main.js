@@ -43,10 +43,10 @@ for (let file of fs.readdirSync(join(__dirname, `events`))) {
 client.once("ready", () => console.log("READY!"));
 setInterval(async function () {
 	let presences = [{
-		text: `over ${client.users.size} users`,
+		text: `over ${client.users.cache.size} users`,
 		type: "WATCHING"
 	}, {
-		text: `over ${client.guilds.size} guilds`,
+		text: `over ${client.guilds.cache.size} guilds`,
 		type: "WATCHING"
 	}, {
 		text: `with version 2.1`,

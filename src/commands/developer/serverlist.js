@@ -12,6 +12,6 @@ module.exports = {
             if (a.position < b.position) return 1;
             return 0;
         }
-        return Embeds.success(message.channel, client.guilds.sort(compare).map(server => `\`\`${server.name}\`\`\n`).join("\n").substr(0, 2000), await client.string(message.guild.id, "command.serverlist.currentServers") + client.guilds.size);
+        return Embeds.success(message.channel, client.guilds.sort(compare).map(server => `\`\`${server.name}\`\`\n`).join("\n").substr(0, 2000), await client.string(message.guild.id, "command.serverlist.currentServers") + client.guilds.cache.size);
     }
 }

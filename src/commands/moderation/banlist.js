@@ -16,7 +16,7 @@ module.exports = {
             if (message.member.hasPermission("BAN_MEMBERS") || message.author.id === client.config.owner) {
                 try {
                     message.guild.fetchBans().then(async banned => {
-                        let list = banned.sort(compare).map(user => user.tag).join("\n");
+                        let list = banned.sort(compare).map(user => user.user.tag).join("\n");
 
                         if (list.length >= 1950) {
                             list = `${list.slice(0, 1948)}...`

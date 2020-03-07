@@ -13,7 +13,7 @@ module.exports = {
                         let contents = [
                             [
                                 await client.string(message.guild.id, "command.leavemsg.currentChannel"),
-                                message.guild.channels.get(r[0].leavechannelid),
+                                message.guild.channels.cache.get(r[0].leavechannelid),
                                 true
                             ],
                             [
@@ -37,7 +37,7 @@ module.exports = {
                     }
                 }
                 let leavemsg = "";
-                let channel = message.guild.channels.find(channel => channel.name === args[0]) || message.guild.channels.get(args[0]);
+                let channel = message.guild.channels.cache.find(channel => channel.name === args[0]) || message.guild.channels.cache.get(args[0]);
                 if (!channel) {
                     return Embeds.error(message.channel, await client.string(message.guild.id, "command.leavemsg.channelNotExist"));
                 }

@@ -409,7 +409,7 @@
     "command.play.duration": "Song Dauer",
     "command.play.addedToQueue": "✅ Zur Warteschlange hinzugefügt",
     "command.play.start": "🎶 Start",
-    "command.play.joinError": "Ich konnte deinem Sprachkanal nicht beitreten: $error",
+    "command.play.joinError": "$error",
     "command.play.enterNumber": "Gib eine Nummer zwischen 1-$videos ein",
 
 

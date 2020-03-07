@@ -6,7 +6,14 @@ module.exports = {
     dm: true,
     cooldown: 5,
     async execute(message, args, client, Embeds) {
-        let target = (message.channel.type == "dm") ? message.author : (message.mentions.members.first() || message.guild.members.get(args[0]) || message.member).user;
+        let target = (message.channel.type == "dm") ? message.author : (message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member).user;
+        let UserGotAvatar = "";
+
+        if (target.avatarURL) {
+            UserGotAvatar = target.avatarURL();
+        } else {
+            UserGotAvatar = targets.defaultAvatarURL();
+        }
 
         if (target.bot == true) {
             return Embeds.error(message.channel, await client.string(message.guild.id, "command.profile.isBot"));
@@ -19,22 +26,22 @@ module.exports = {
             if (r.length == 1) {
                 let contents = [
                     [
-                        `${client.emojis.get("660226455451598858")} Switch Friendcode`,
+                        `${client.emojis.cache.get("660226455451598858")} Switch Friendcode`,
                         r[0].switchfc,
                         true
                     ],
                     [
-                        `${client.emojis.get("660226454763732994")} BattleTag`,
+                        `${client.emojis.cache.get("660226454763732994")} BattleTag`,
                         r[0].battletag,
                         true
                     ],
                     [
-                        `${client.emojis.get("660474442610114589")} Steam Username`,
+                        `${client.emojis.cache.get("660474442610114589")} Steam Username`,
                         r[0].steam,
                         true
                     ]
                 ]
-                return Embeds.uni(message.channel, r[0].description, target.tag, contents, "", target.avatarURL, r[0].color);
+                return Embeds.uni(message.channel, r[0].description, target.tag, contents, "", UserGotAvatar, r[0].color);
             } else {
                 client.con.query("INSERT INTO users(userid) VALUES (?)", [target.id]);
                 client.con.query("SELECT * FROM users WHERE userid = ? LIMIT 1;", [target.id], async (e, r) => {
@@ -43,22 +50,22 @@ module.exports = {
                     }
                     let contents = [
                         [
-                            `${client.emojis.get("660226455451598858")} Switch Friendcode`,
+                            `${client.emojis.cache.get("660226455451598858")} Switch Friendcode`,
                             r[0].switchfc,
                             true
                         ],
                         [
-                            `${client.emojis.get("660226454763732994")} BattleTag`,
+                            `${client.emojis.cache.get("660226454763732994")} BattleTag`,
                             r[0].battletag,
                             true
                         ],
                         [
-                            `${client.emojis.get("660474442610114589")} Steam Username`,
+                            `${client.emojis.cache.get("660474442610114589")} Steam Username`,
                             r[0].steam,
                             true
                         ]
                     ]
-                    return Embeds.uni(message.channel, r[0].description, target.tag, contents, "", target.avatarURL, r[0].color);
+                    return Embeds.uni(message.channel, r[0].description, target.tag, contents, "", UserGotAvatar, r[0].color);
                 });
             }
         });

@@ -6,13 +6,11 @@ module.exports = {
 	dm: false,
 	cooldown: 5,
 	async execute(message, args, client, Embeds) {
-		const {
-			voiceChannel
-		} = message.member;
+		const voiceChannel = message.member.voice.channel;
 		if (!voiceChannel) {
 			return Embeds.error(message.channel, await client.string(message.guild.id, "command.pause.userNotInChannel"));
 		}
-		if (voiceChannel !== message.guild.me.voiceChannel) {
+		if (voiceChannel !== message.guild.me.voice.channel) {
 			return Embeds.error(message.channel, await client.string(message.guild.id, "command.pause.botNotInChannel"));
 		}
 		const serverQueue = message.client.queue.get(message.guild.id);

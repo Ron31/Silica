@@ -4,19 +4,5 @@
         "idle": "<:idle:507524745378398210> Idle",
         "dnd": "<:dnd:507524739582001178> Do Not Disturb",
         "offline": "<:offline:507524756627652613> Offline"
-    },
-    "activity": {
-        "0": "Playing",
-        "1": "Streaming",
-        "2": "Listening to",
-        "3": "Watching",
-        "4": "Custom Status"
-    },
-    "verification": {
-        "0": "None",
-        "1": "Low",
-        "2": "Medium",
-        "3": "Hard",
-        "4": "Extreme"
     }
 }

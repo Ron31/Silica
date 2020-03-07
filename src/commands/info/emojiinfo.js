@@ -8,7 +8,7 @@ module.exports = {
     async execute(message, args, client, Embeds) {
         const moment = require("moment");
         
-        let emote = message.guild.emojis.find(emoji => emoji.name === args.join(" "));
+        let emote = message.guild.emojis.cache.find(emoji => emoji.name === args.join(" "));
 
         if (args.join(" ") !== "") {
             if (!emote) {

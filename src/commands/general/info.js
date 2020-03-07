@@ -44,6 +44,6 @@ module.exports = {
                 (await client.string(message.guild.id, "command.info.invite")).replace("$invite", "Vote").replace("$link", "https://botsfordiscord.com/bot/619842083175399425"),
             ]
         ]
-        return Embeds.uni(message.channel, "", (await client.string(message.guild.id, "command.info.programmedBy")).replace("$owner", client.users.get(client.config.owner).tag), contents, "", "", 0x7289DA);
+        return Embeds.uni(message.channel, "", (await client.string(message.guild.id, "command.info.programmedBy")).replace("$owner", client.users.cache.get(client.config.owner).tag), contents, "", "", 0x7289DA);
     }
 }
