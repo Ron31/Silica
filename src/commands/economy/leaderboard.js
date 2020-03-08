@@ -10,7 +10,7 @@ module.exports = {
             if (e) {
                 return Embeds.error(message.channel, "\`\`\`js\n" + e + "\`\`\`");
             }
-            return Embeds.uni(message.channel, `${r.map(u => `${client.users.cache.find(i => i.id === u.userid).user.tag}: ` + `\`\`${u.cookies} 🍪\`\``).join(`\n`)}`, (await client.string(message.guild.id, "command.leaderboard.title")), "", "", "", 0x7289DA);
+            return Embeds.uni(message.channel, `${r.map(u => `${client.users.cache.find(i => i.id === u.userid).tag}: ` + `\`\`${u.cookies} 🍪\`\``).join(`\n`)}`, (await client.string(message.guild.id, "command.leaderboard.title")), "", "", "", 0x7289DA);
         });
     }
 }
