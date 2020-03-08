@@ -12,9 +12,9 @@ module.exports = {
 		const ytdl = require("ytdl-core");
 		const os = require("os");
 		const voiceChannel = message.member.voice.channel;
-		if (os.cpus()[0].model.split("@")[0] == "ARMv7 Processor rev 4 (v7l)") {
-			return Embeds.error(message.channel, await client.string(message.guild.id, "command.play.commandError"));
-		}
+		// if (os.cpus()[0].model.split("@")[0] == "ARMv7 Processor rev 4 (v7l)") {
+		// 	return Embeds.error(message.channel, await client.string(message.guild.id, "command.play.commandError"));
+		// }
 		if (!voiceChannel) {
 			return Embeds.notice(message.channel, await client.string(message.guild.id, "command.play.userNotInChannel"));
 		}
@@ -92,7 +92,7 @@ module.exports = {
 			const dispatcher = queue.connection.play(await ytdl(song.url), {
 					passes: 3
 				})
-				.on("end", reason => {
+				.on("finish", reason => {
 					if (reason === "Stream is not generating quickly enough") {
 						return Embeds.error(message.channel, "Stream is not generating quickly enough");
 					}
