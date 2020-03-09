@@ -4,8 +4,8 @@ module.exports = async (client, guild) => {
     let channel = client.channels.cache.get("676179617362739227");
     let ServerIcon = "";
 
-    if (guild.iconURL) {
-        ServerIcon = guild.iconURL;
+    if (guild.iconURL()) {
+        ServerIcon = guild.iconURL();
     }
 
     let contents = [
