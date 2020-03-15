@@ -40,7 +40,9 @@ for (let file of fs.readdirSync(join(__dirname, `events`))) {
 	client.on(eventName, event.bind(null, client));
 }
 
-client.once("ready", () => console.log("READY!"));
+client.once("ready", async () => {
+	console.log("READY!");
+});
 setInterval(async function () {
 	let presences = [{
 		text: `over ${client.users.cache.size} users`,
