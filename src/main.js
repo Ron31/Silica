@@ -86,6 +86,9 @@ client.on("message", message => {
 			return Embeds.error(message.channel, "I can't execute that command inside DMs");
 		}
 	}
+	if(message.channel.type == "dm") {
+		message.guild = "dm";
+	}
 	if (!client.cooldowns.has(command.name)) {
 		client.cooldowns.set(command.name, new Discord.Collection());
 	}
