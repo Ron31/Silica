@@ -87,7 +87,7 @@ client.on("message", message => {
 		}
 	}
 	if(message.channel.type == "dm") {
-		message.guild = "dm";
+		message.guild.id = "dm";
 	}
 	if (!client.cooldowns.has(command.name)) {
 		client.cooldowns.set(command.name, new Discord.Collection());
